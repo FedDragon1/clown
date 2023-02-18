@@ -14,7 +14,6 @@ function pagerMain() {
 }
 
 function jumpTo(to) {
-    console.log(to)
     let current = parseInt(content.getAttribute("data-currpn"));
 
     let fromA = jump.querySelector(`a[data-tpto="${current}"]`);
@@ -90,7 +89,7 @@ function jumpAnchor(a) {
 }
 
 function jumpEnd() {
-    if (maxPage === content.getAttribute("data-currpn"))
+    if (maxPage == content.getAttribute("data-currpn"))
         return;
     jumpTo(maxPage);
 }
