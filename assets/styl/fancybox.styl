@@ -1,0 +1,74 @@
+#fancybox
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background rgba(black, 0.3)
+  backdrop-filter blur(5px)
+  transition opacity 0.5s ease-in-out
+
+  #fb-layout
+    z-index 10
+    position relative
+    height 100%
+    display flex
+    justify-content center
+
+    #fb-content
+      position relative
+
+      #fb-img-wrapper
+        clip-path polygon(0 0, calc(100% - 11px) 0, calc(100% - 11px) 75px, 100% 75px, 100% 100%, 0 100%)
+        padding-top 75px
+        position relative
+        overflow hidden auto
+        height 100vh
+        img
+          transition height 0.2s ease-in-out, width 0.2s ease-in-out
+          display inline-block
+          height calc(100vh - 75px)
+          min-height calc(100vh - 75px)
+
+      #fb-ui
+        display flex
+        flex-direction column
+        position absolute
+        right -65px
+        bottom 25px
+        gap 5px
+
+        a
+          text-shadow black 2px 4px 4px
+          cursor pointer
+          user-select none
+          font-size: 30px !important;
+          width 50px
+          height 50px
+          line-height 50px !important
+          text-align center
+          font var(--fa-font-solid)
+          background rgba(whitesmoke, 0.1)
+          border-radius 10px
+          transition all ease-in-out 0.2s
+
+        a:hover
+          color #94c9fd
+          transform scale(1.1)
+
+      #fb-alert-wrapper
+        width 100%
+        display flex
+        justify-content center
+        position absolute
+        bottom 75vh
+        overflow hidden
+
+        #fb-alert
+          padding 10px
+          border-radius 10px
+          text-align center
+          font-size 1.5rem
+          line-height 1.5rem
+          background #af2323aa
+          translate 0 45px

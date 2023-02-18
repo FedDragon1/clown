@@ -1,0 +1,47 @@
+hoverglow(maxwidth)
+  &:before
+      z-index 1001
+      white-space nowrap
+      display inline-block
+      content attr(content)
+      top 0
+      position absolute
+      font-size 1.5rem
+      color transparent
+      border-bottom 1px dashed whitesmoke
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #e1ded7;
+      height 52px
+      max-width 0
+      overflow hidden
+      transition max-width 0.2s ease-in-out
+      text-shadow whitesmoke 0 0 4px
+    &:hover:before
+      max-width maxwidth
+
+nav
+  position fixed
+  top 0
+  width 100vw
+  height 75px
+  background-image radial-gradient(#000000aa, #141414);
+  background-size 5px 5px
+  z-index 1000
+  user-select none
+
+  #title
+    position relative
+    display inline-block
+    line-height 75px
+    padding-left 40px
+    font-size 1.5rem
+    z-index 1002
+    hoverglow(500px)
+
+  #author
+    position relative
+    float right
+    font-size 1.5rem
+    padding-right 40px
+    line-height 75px
+    hoverglow(100px)

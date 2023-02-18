@@ -1,0 +1,5 @@
+虽说这个网站不会外传，也不会产生任何商业价值，但是还是把用到的东西出处放在这里啦( •̀ ω •́ )✧
+
+background.png: https://www.pixiv.net/artworks/104732350
+zhuziawan.woff2: https://conf.totoro.pub/fonts/zhuziawan/zhuziawan.47.woff2
+particles.min.js: https://vincentgarreau.com/particles.js/

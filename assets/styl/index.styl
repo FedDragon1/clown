@@ -1,0 +1,147 @@
+@import "floor.styl"
+@import "nav.styl"
+@import "fancybox.styl"
+
+@font-face
+  font-family 'zhuziawan'
+  font-style normal
+  font-weight 400
+  src url("../zhuziawan.woff2") format("woff2")
+
+:root, :host {
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fa-solid-900.woff2") format("woff2"), url("../fa-solid-900.ttf") format("truetype"); }
+
+.fas,
+.fa-solid {
+  font-weight: 900;
+}
+
+*
+  margin 0
+  padding 0
+  font-family zhuziawan, Arial, Helvetica, sans-serif
+  color whitesmoke
+  scrollbar-width 10px
+  scrollbar-color black, #eac3e2
+
+::-webkit-scrollbar
+  width 10px
+  background black
+
+::-webkit-scrollbar-thumb
+  background linear-gradient(to bottom, black, #eac3e2)
+  border-radius 5px
+
+::-webkit-scrollbar-track
+  border-radius 5px
+
+::-webkit-scrollbar-button
+  background radial-gradient(black, #eac3e2)
+  border-radius 5px
+  height 10px
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+
+@keyframes -onload
+  0%
+    backdrop-filter blur(50px)
+    filter brightness(0) blur(50px)
+  //75%
+  //  backdrop-filter blur(0)
+  100%
+    filter brightness(1) blur(0)
+    backdrop-filter blur(0)
+
+body
+  background-image url("../background.png")
+  background-attachment fixed
+  background-repeat no-repeat
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  display flex
+  flex-direction column
+
+html {
+  scroll-behavior: smooth;
+}
+
+#blur
+  animation -onload 1.5s ease-in-out 1
+
+@keyframes -noscript
+  0%
+    opacity 0
+    backdrop-filter none
+  100%
+    opacity 1
+    backdrop-filter blur(5px) brightness(0.3)
+
+@keyframes -noscript-text
+  0%
+    color whitesmoke
+  50%
+    color #94c9fd
+
+@keyframes -noscript-hue
+  0%
+    filter hue-rotate(0)
+  100%
+    filter hue-rotate(360deg)
+
+noscript
+  position fixed
+  z-index 10000
+  left 0
+  right 0
+  top 0
+  bottom 0
+  font-size 10vh
+  animation -noscript 2s ease-in-out forwards, -noscript-text 5s ease-in-out infinite, -noscript-hue 10s linear infinite
+  text-align center
+  line-height 100vh
+  text-shadow black 4px 8px 8px
+  border currentColor 10px solid
+  user-select none
+
+.emoticon
+  height 32px
+  //position absolute
+  translate 0 8px
+
+#particles-js
+  position fixed
+  top 0
+  left 0
+  height 100vh
+  width 100vw
+
+#footer
+  background #000000bb
+  height 125px;
+  display flex
+  justify-content space-around
+  flex-direction column
+
+  span
+    line-height 1.8rem
+    display inline-block
+    width 100vw
+    text-align center
