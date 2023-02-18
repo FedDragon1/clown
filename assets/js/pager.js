@@ -4,7 +4,7 @@ let content;
 let jump;
 let jump2;
 let maxPage = 67;
-setTimeout(pagerMain, 200)
+setTimeout(pagerMain, 1000)
 
 
 function pagerMain() {
