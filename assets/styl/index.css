@@ -819,6 +819,8 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #eac3e2 #000;
+  scrollbar-width: thin;
 }
 #blur {
   animation: -onload 1.5s ease-in-out 1;
