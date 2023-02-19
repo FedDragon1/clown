@@ -702,6 +702,8 @@ nav #author:hover:before {
   position: relative;
   overflow: hidden auto;
   height: 100vh;
+  scrollbar-color: #eac3e2 #000;
+  scrollbar-width: thin;
 }
 #fancybox #fb-layout #fb-content #fb-img-wrapper img {
   transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
