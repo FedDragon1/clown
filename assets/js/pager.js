@@ -57,7 +57,7 @@ function jumpTo(to) {
         content.style.filter = "";
         content.style.opacity = "";
     }, 250)
-    setTimeout(main, 200)
+    setTimeout(main, 500)
 }
 
 function jumpAbs(input) {
