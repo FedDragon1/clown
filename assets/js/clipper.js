@@ -19,6 +19,8 @@ function main() {
         floor.addEventListener("mouseover", overListener);
         floor.addEventListener("mouseout", outListener);
     }
+
+    setTimeout(main, 5000)
 }
 
 function generateClippath(floor, floorLevel, height, width) {
