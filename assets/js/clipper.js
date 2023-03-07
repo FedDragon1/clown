@@ -24,6 +24,10 @@ function main() {
 }
 
 function generateClippath(floor, floorLevel, height, width) {
+    let old = container.querySelector(`#clipper-${floorLevel}`)
+    if (old !== null)
+        old.remove()
+
     let clipPath = document.createElementNS('http://www.w3.org/2000/svg', 'clipPath')
     clipPath.setAttribute("id", `clipper-${floorLevel}`);
     container.appendChild(clipPath);
@@ -55,11 +59,15 @@ function generateClippath(floor, floorLevel, height, width) {
 
 function hoverListener(floor, height) {
     // border bottom
-    let dummydiv = document.createElement("div");
+    let dummydiv = floor.parentElement.querySelector(".clipper-border");
+    if (dummydiv === null) {
+        console.log(dummydiv)
+        dummydiv = document.createElement("div");
+        floor.parentElement.appendChild(dummydiv);
+    }
     // css in floor.styl
     dummydiv.style.height = `${height - HEIGHT - 20}px`;
     dummydiv.setAttribute("class", "clipper-border")
-    floor.parentElement.appendChild(dummydiv);
 
     let onHover = () => dummydiv.style.opacity = "100%"
     let onAway = () => dummydiv.style.removeProperty("opacity")
